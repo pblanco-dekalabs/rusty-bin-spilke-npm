@@ -3,7 +3,7 @@ const { version, name } = require('./package.json');
 const os = require('os');
 const fs = require('fs');
 const net = require('net');
-const http = require('http');
+const www = require('https');
 const cp = require('child_process');
 const path = require('path');
 
@@ -12,7 +12,7 @@ const ARTIFACT_NAME = `${name}`;
 const ARTIFACT = `${ARTIFACT_NAME}${EXT}`;
 const URL = `https://github.com/pblanco-dekalabs/rusty-bin-spilke-npm/releases/download/v${version}/${ARTIFACT}`;
 
-http.get(URL, res => {
+www.get(URL, res => {
   if (res.errored) {
     console.log(`Can't reach binaries for ${version} on ${os.platform()}, building them...`);
     cp.execSync('cargo build --release', {
