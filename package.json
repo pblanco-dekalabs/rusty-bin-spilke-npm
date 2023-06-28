@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "bin": {
-    "rusty-bin-splike-npm": "./bin/rusty-bin-splike-npm"
+    "rusty-bin-splike-npm": "./bin/rusty-bin-splike-npm.js"
   },
   "repository": "git@github.com:pblanco-dekalabs/rusty-bin-spilke-npm.git",
   "author": "pblanco-dekalabs <pblanco@dekalabs.com>",
